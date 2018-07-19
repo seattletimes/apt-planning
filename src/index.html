@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Where the apartments are going</h1>
+        <p>Seattle is slated to get 82 percent of apartments in the current planning pipeline, among buildings with at least 50 units. Click on each area to see how many units are in the official planning stages, and how many are under construction 
+          now.</p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=9>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+
+        </div>
+        <aside class="legend">
+          <h1>Number of planned apartments</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #c7e9b4"></span> 0 - 100</li>
+            <li>
+              <span class="block" style="background-color: #7fcdbb"></span> 101 - 500</li>
+            <li>
+              <span class="block" style="background-color: #1d91c0"></span> 501 - 1000</li>
+            <li>
+              <span class="block" style="background-color: #253494"></span> 1001 - 2000</li>
+            <li>
+              <span class="block" style="background-color: #081d58"></span> 2001 - 9390</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Source: Apartment Insights/RealData
+        <span class="credit">CLARE ORTBLAD / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
