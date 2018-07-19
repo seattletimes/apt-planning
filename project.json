@@ -5,13 +5,14 @@
       "path": "persistent-outside"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/business/apartment-planning"
     }
   },
   "title": "",
   "description": "",
   "url": "",
   "slug": "",
-  "tags": []
+  "tags": [],
+  "production": true
 }
